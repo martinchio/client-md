@@ -2,26 +2,102 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+h1 {
+  @apply text-2xl;
+  @apply font-bold;
+  @apply tracking-tighter;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+h2 {
+  @apply text-xl;
+  @apply font-bold;
+  @apply tracking-tighter;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+h3 {
+  @apply text-lg;
+  @apply font-semibold;
+  @apply tracking-tighter;
+}
+
+h4 {
+  @apply text-base;
+  @apply font-semibold;
+  @apply tracking-tighter;
+}
+
+pre {
+  @apply text-sm;
+  @apply font-mono;
+  @apply bg-gray-100;
+  @apply rounded-sm;
+  @apply px-1;
+  @apply mx-2;
+  @apply w-full;
+}
+
+table {
+  @apply w-full;
+  @apply border-collapse;
+  @apply text-left;
+  @apply mb-4;
+}
+
+th,
+td {
+  @apply border;
+  @apply px-4;
+  @apply py-2;
+}
+
+th {
+  @apply bg-gray-300;
+}
+
+tr:nth-child(even) {
+  @apply bg-gray-100;
+}
+
+hr {
+  @apply my-4;
+  @apply border-t;
+  @apply border-gray-300;
+}
+
+/* Lists */
+ul {
+  @apply list-decimal pl-5 mb-4;
+}
+
+ol {
+  @apply list-decimal pl-5 mb-4;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  @apply pl-5 mt-2;
+}
+
+li {
+  @apply mb-2 text-base leading-relaxed;
+}
+
+li:last-child {
+  @apply mb-0;
+}
+
+/* For unordered lists, we can use disc */
+ul {
+  @apply list-disc;
+}
+
+/* Blockquotes */
+blockquote {
+  @apply border-l-4;
+  @apply border-blue-400;
+  @apply pl-4;
+  @apply italic;
+  @apply text-gray-700;
 }
